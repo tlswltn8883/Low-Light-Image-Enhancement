@@ -11,8 +11,11 @@
 ## Network Architecture
 ![MSTSA-UTNet](figs/network.png)
 
-## Package dependencies
-This project is built by Python 3.9, Pytorch 2.5, CUDA 12.4.
+## Requirements
+
+- Python 3.9
+- PyTorch 2.5
+- CUDA 12.4
 
 ## Training and Evaluation
 To train and evaluate MSTSA-UTNet, set the options in `train.py` or `test.py`, and run:
@@ -22,6 +25,10 @@ python test.py
 ```
 
 ## Results
+- **+0.59 dB PSNR** improvement over SMNet on the LOL-v1 dataset
+- **20 FPS** inference speed
+- **69.72 mAP@50** on the ExDark dataset
+
 The PSNR-FLOPs-Params comparison on LOL-v1 dataset:
 ![flops](figs/flops.png)
 
@@ -30,3 +37,21 @@ The quantitative comparison on LOL-v1 dataset:
 
 The object detection comparison on ExDark dataset:
 ![detection](figs/detection.png)
+
+## Citation
+If you find this work useful, please cite:
+
+```bibtex
+@article{shin2026mstsa,
+  title={A Multi-Scale U-Shaped Transformer Neural Network for Low-Light Image Enhancement},
+  author={Shin Ji Soo and Lee Ho Sub},
+  journal={Image and Vision Computing},
+  volume={166},
+  pages={105801},
+  year={2026},
+  doi={10.1016/j.imavis.2025.105801}
+}
+```
+
+**Acknowledgment:**
+This code is based on the [RawFormer](https://github.com/xuwanyan1998/RawFomer).
